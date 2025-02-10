@@ -11,6 +11,7 @@ import RRRCenter from "../../RRR_Center";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LitterBins from "../../LitterBinsInULB";
 import FeedbackSection from "../../Feedback-Section";
+import CareTakerDashboard from "../../careTaker-Section";
 const DashboardMain=()=>{
     return(
         <>
@@ -52,6 +53,7 @@ const DashboardMain=()=>{
             <Route path="/AddnewPt" element={<AddNewToilet/>}></Route>
             <Route path="/LitterBins" element={<LitterBins/>}></Route>
             <Route path="/feedbackSection" element={<FeedbackSection/>}></Route>
+            <Route path="/toiletCaretaker" element={<CareTakerDashboard/>}></Route>
             <Route path="*" element={<TotalCpTp/>}></Route>
             
         </Routes>

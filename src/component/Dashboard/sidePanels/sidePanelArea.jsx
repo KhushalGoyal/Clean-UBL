@@ -8,20 +8,34 @@ import careTker1 from "../../../assets/icons/careTaker1.png";
 import GD from "../../../assets/icons/GD.png";
 import litterBin from "../../../assets/icons/litterBin.png"
 function SidePanelArea() {
-
+    const navigate=useNavigate();
 const onDashboard=()=>{
-    location.pathname="/ulbDashboard";
+    navigate({
+        pathname:"/ULBDashboard",
+        search:createSearchParams({
+            
+        }).toString()
+    })
+}
+const oncareTaker=()=>{
+    navigate({
+        pathname:"/ULBDashboard/toiletCaretaker",
+        search:createSearchParams({
+            
+        }).toString()
+    })
+
 }
 const onCommunityToilet=()=>{
-    location.pathname="/ulbDashboard/CommunityToilet";
+    location.pathname="/ULBDashboard/CommunityToilet";
 }
 const onRRRCentre=()=>{
-    location.pathname="/ulbDashboard/RRRCenter"
+    location.pathname="/ULBDashboard/RRRCenter"
 }
-const navigate=useNavigate();
+
 const onLitterBoxSection=()=>{
     navigate({
-        pathname:"/ulbDashboard/LitterBins",
+        pathname:"/ULBDashboard/LitterBins",
         search:createSearchParams({
             
         }).toString()
@@ -29,7 +43,7 @@ const onLitterBoxSection=()=>{
 }
 const onFeedback=()=>{
     navigate({
-        pathname:"/ulbDashboard/feedbackSection",
+        pathname:"/ULBDashboard/feedbackSection",
         search:createSearchParams({
         
         }).toString()
@@ -78,7 +92,7 @@ const onFeedback=()=>{
                     <img className={styles.leftLogos} src={RRR} alt="Tourist logo" />
                     </span>RRR Center/Mukhiya Mantri Sadbhavna Kendra
                     </li>
-            <li className={styles.ptLeft}>
+            <li onClick={oncareTaker} className={styles.ptLeft}>
             <span >
                     <img className={styles.leftLogos} src={careTker1} alt="Tourist logo" />
                     </span> Caretaker in Toilets

@@ -22,7 +22,7 @@ const Header=()=>{
     <Routes>
       <Route path="/" element ={<FeedbackArea/>}></Route>
       <Route path="/newEntry" element={<RRRform/>}></Route>
-      <Route path="/ulbDashboard/*" element={<DashboardMain/>}></Route>
+      <Route path="/ULBDashboard/*" element={<DashboardMain/>}></Route>
     {/* <NHeader/>
     <Nmain/>
     <HookArea/>
